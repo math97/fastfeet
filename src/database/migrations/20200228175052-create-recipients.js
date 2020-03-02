@@ -31,8 +31,16 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      CEP: {
-        type: Sequelize.INTEGER(8),
+      cep: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      created_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
+      updated_at: {
+        type: Sequelize.DATE,
         allowNull: false,
       },
     }),

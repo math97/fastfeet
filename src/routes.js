@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import sessionController from './app/controllers/SessionController';
+import recipientsController from './app/controllers/RecipientsController';
 import auth from './app/middlewares/auth';
 
 const routes = new Router();
@@ -7,8 +8,6 @@ const routes = new Router();
 routes.post('/session', sessionController.store);
 
 routes.use(auth);
-routes.get('/test', (req, res) => {
-  res.json({ message: 'ok' });
-});
+routes.post('/recipients', recipientsController.store);
 
 export default routes;
